@@ -1,0 +1,10 @@
+
+
+class PotionBag{
+
+    constructor (listOfPotions){
+        
+    }
+
+
+}
