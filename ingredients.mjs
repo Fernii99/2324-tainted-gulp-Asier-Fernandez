@@ -15,10 +15,11 @@ class Ingredients{
     find(name){
         const ingredient = this.ingredients.find(element => element.hasName(name));
 
-        if (ingredient  === undefined ) 
-            throw new Error('Unkown ingredient ${name}')
-
+        if (ingredient  === undefined ) {
+            throw new Error('Unkown ingredient ' + name)
+        }else{
             return ingredient;
+        }
     }
 
     

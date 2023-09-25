@@ -10,15 +10,16 @@ class Character {
     }   
 
 
-    from(playerData, potions){
+     from(playerData, potions){
+        const fullName = playerData.players[0].name + " the " + playerData.players[0].class;
+   
 
         return new Character(
-            fullName = playerData[0].name + " the " + playerData[0].class,
-            playerData[0].health,
-            playerData[0].magic,
-            playerData[0].stamina,
+            fullName,
+            playerData.players[0].health,
+            playerData.players[0].magick,
+            playerData.players[0].stamina,
             potions
-
         )
     }
 
