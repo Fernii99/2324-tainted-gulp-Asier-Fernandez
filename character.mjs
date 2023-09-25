@@ -26,8 +26,9 @@ class Character {
 }
 
 
-function drinkEmAll(bagOfPotions){
+// function drinkEmAll(potionBag, character){
 
-        
+//    const type = potionBag.listOfPotions.map(potion => { 
 
-}
+//     if(potion.name.some(""))
+// }

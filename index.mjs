@@ -2,7 +2,7 @@ import { Ingredients} from './ingredients.mjs'
 import { Cauldron } from './cauldron.mjs'
 import { getCharacterData, getData } from './service.mjs'
 import { PotionBag } from './potionBag.mjs'
-import { Character } from './character.mjs'
+import { Character,  } from './character.mjs'
  
 const execute = async () => {
 
@@ -12,12 +12,17 @@ const execute = async () => {
     const cauldron = new Cauldron(ingredients);
 
     const potionBag = new PotionBag;
-    const listOfPotions = potionBag.createPotions(characterData.players[0].pouch_red, cauldron);
-    showPotions(listOfPotions)
+    const listOfPotions = potionBag.createPotions(characterData.players[0].pouch_aged, cauldron);
+    showPotions(listOfPotions);
     const character = new Character;
     const myPlayer = character.from(characterData,listOfPotions);
 
+
+
     showCharacter(myPlayer);
+
+    //myPlayer.drinkEmAll(listOfPotions);
+    console.log(JSON.stringify(listOfPotions));
 
 }
 
@@ -25,8 +30,9 @@ execute()
 
 
 const showPotions = (listOfPotions) => {
-
-    console.log(listOfPotions);
+    console.log("LIST OF THE POTIONS CREATED :");
+    console.log(listOfPotions );
+    console.log(" \n \n \n")
 
 }
 
